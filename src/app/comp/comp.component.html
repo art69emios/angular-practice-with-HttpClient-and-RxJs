@@ -1,0 +1,46 @@
+<h1>Introduction to HttpClient and RxJs</h1>
+<pre>
+Task 1 
+
+Create a component and service to output downloaded data from https://jsonplaceholder.typicode.com/albums . 
+In the service connect HttpClient and make a GET request. 
+In component output information in template and via console.log(); 
+</pre>
+<div *ngFor="let array of data">
+   <span>{{array.userId}}</span>-
+   <span>{{array.id}}</span>-
+   <span>{{array.title}}</span>
+ </div>
+<hr>
+<pre>
+Task 2 
+
+Create a separate file album.ts . 
+In it, write Album class with instances of "id" and "title" properties. 
+Add the pipe method to the get request in the job service above. 
+Use map function of RxJs library and convert data received from server into array of Ablum objects which won't have "userId" property compared to server array. 
+Output to console.log() the array before the conversion. 
+</pre>
+<app-album></app-album>
+<hr>
+<pre>
+Task 3. 
+
+Implement the get, post, put delete 
+requests step by step in the "toDo list" application 
+by installing and connecting the InMemoryWebApiModule plugin (remember, with the plugin connected, 
+requests to remote servers will not work).
+</pre>
+<app-todo-list></app-todo-list>
+
+<hr>
+<pre>
+  Task 4.
+
+  Use the interval function of the RxJs library in the component, displaying its operating counter. 
+  Implement start on the Start button and stop on the Stop button.
+</pre>
+
+<p>{{counter}}</p>
+<span><button (click)="startCount()">start</button></span>
+<span><button (click)="stopCount()">stop</button></span>
